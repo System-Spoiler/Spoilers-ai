@@ -75,6 +75,8 @@
             position: relative;
             overflow: hidden;
             margin: 20px 0;
+            max-height: 80vh;
+            overflow-y: auto;
         }
         
         .onboarding-content::before {
@@ -166,6 +168,15 @@
             gap: 15px;
             margin: 30px 0 20px;
             flex-wrap: wrap;
+            position: sticky;
+            bottom: 0;
+            background: rgba(26, 26, 46, 0.9);
+            padding: 15px 0;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: -30px;
+            margin-left: -30px;
+            margin-right: -30px;
+            backdrop-filter: blur(5px);
         }
         
         .action-btn {
@@ -979,7 +990,19 @@
                     <div class="feature-title">Ideas</div>
                     <div class="feature-desc">Brainstorm project ideas and solutions</div>
                 </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-question"></i></div>
+                    <div class="feature-title">Questions</div>
+                    <div class="feature-desc">Answer all your programming questions</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="feature-title">Projects</div>
+                    <div class="feature-desc">Help with project planning and architecture</div>
+                </div>
             </div>
+            
+            <p style="margin-top: 20px;">With Spoilers AI, you'll have a powerful coding companion that can help you learn faster, code better, and solve problems more efficiently.</p>
             
             <div class="action-buttons">
                 <button class="action-btn primary-btn" id="start-chatting-btn">Start Chatting</button>
@@ -1037,7 +1060,7 @@
             <div class="chat-container">
                 <div class="chat-messages" id="chat-messages">
                     <div class="message bot-message">
-                        Hello! I'm Spoilers AI, your coding assistant. Ask me any programming questions or for help with your code. I can help with syntax, debugging, algorithms, and more!
+                        Hello! I'm Spoilers AI, your Ai assistant. Ask me any questions or for help with your code or any issue. I can help with everything life issues, ideas, riddles, syntax, debugging, algorithms, and more!
                         <div class="message-time" id="welcome-time"></div>
                     </div>
                 </div>
@@ -1105,7 +1128,7 @@
             const particlesContainer = document.getElementById('particles');
             
             // API Configuration
-            const API_KEY = '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';
+            const API_KEY = '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';
             const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
             
             // App State
